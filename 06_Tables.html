@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables - Complete Guide & SEO Best Practices</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+        
+        .info-box {
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #856404;
+        }
+        
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #155724;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .example {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+        
+        .demo-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        
+        .demo-table th {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        .demo-table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        
+        .demo-table tr:nth-child(even) {
+            background-color: #f0f0f0;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 15px 0;
+        }
+        
+        .comparison-item {
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        
+        .good-example {
+            border-left: 4px solid #28a745;
+            background-color: #f0fdf4;
+        }
+        
+        .bad-example {
+            border-left: 4px solid #dc3545;
+            background-color: #fef2f2;
+        }
+        
+        .responsive-table {
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    <!-- ========================================
+         WHAT ARE TABLES IN HTML?
+         ======================================== -->
+    
+    <h1>HTML Tables - Complete Guide & SEO Best Practices</h1>
+    
+    <h2>What are Tables in HTML?</h2>
+    
+    <div class="info-box">
+        <h3>Table Definition:</h3>
+        <p>
+            HTML tables are used to display data in rows and columns format. They organize 
+            tabular data in a structured, easy-to-read way.
+        </p>
+        <p>
+            <strong>Basic Structure:</strong><br>
+            • <code>&lt;table&gt;</code> - Table container<br>
+            • <code>&lt;tr&gt;</code> - Table Row<br>
+            • <code>&lt;th&gt;</code> - Table Header<br>
+            • <code>&lt;td&gt;</code> - Table Data/Cell<br>
+            • <code>&lt;thead&gt;</code> - Table Header Section<br>
+            • <code>&lt;tbody&gt;</code> - Table Body Section<br>
+            • <code>&lt;tfoot&gt;</code> - Table Footer Section<br>
+            • <code>&lt;caption&gt;</code> - Table Title/Description
+        </p>
+        <p>
+            <strong>Key Characteristics:</strong><br>
+            ✓ Used for displaying structured data<br>
+            ✓ Block-level element<br>
+            ✓ Improves content organization<br>
+            ✓ Helps with data accessibility<br>
+            ✓ Can be styled with CSS<br>
+            ✓ Important for data presentation and SEO
+        </p>
+    </div>
+    
+    
+    <!-- ========================================
+         BASIC TABLE STRUCTURE
+         ======================================== -->
+    
+    <h2>Basic Table Structure</h2>
+    
+    <div class="info-box">
+        <h3>Simple Table Syntax:</h3>
+        <p>
+            <strong>Basic HTML Table:</strong>
+        </p>
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 1&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 2&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+        <p>
+            <strong>Semantic Table (RECOMMENDED):</strong>
+        </p>
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;Monthly Sales Data&lt;/caption&gt;<br>
+            &nbsp;&nbsp;&lt;thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Month&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Sales&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/thead&gt;<br>
+            &nbsp;&nbsp;&lt;tbody&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;January&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$50,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tbody&gt;<br>
+            &nbsp;&nbsp;&lt;tfoot&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Total&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$600,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tfoot&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         TABLE ELEMENTS & ATTRIBUTES
+         ======================================== -->
+    
+    <h2>Table Elements & Attributes</h2>
+    
+    <h3>Main Table Elements:</h3>
+    
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Purpose</th>
+            <th>Parent/Child</th>
+            <th>SEO Impact</th>
+        </tr>
+        <tr>
+            <td><code>&lt;table&gt;</code></td>
+            <td>Table container</td>
+            <td>Parent of all</td>
+            <td>High - defines table boundaries</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tr&gt;</code></td>
+            <td>Table Row</td>
+            <td>Child of table/thead/tbody/tfoot</td>
+            <td>High - defines row structure</td>
+        </tr>
+        <tr>
+            <td><code>&lt;th&gt;</code></td>
+            <td>Table Header Cell</td>
+            <td>Child of tr</td>
+            <td>Very High - identifies column/row headers</td>
+        </tr>
+        <tr>
+            <td><code>&lt;td&gt;</code></td>
+            <td>Table Data Cell</td>
+            <td>Child of tr</td>
+            <td>High - contains actual data</td>
+        </tr>
+        <tr>
+            <td><code>&lt;thead&gt;</code></td>
+            <td>Table Head Section</td>
+            <td>Child of table</td>
+            <td>Very High - semantic header grouping</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tbody&gt;</code></td>
+            <td>Table Body Section</td>
+            <td>Child of table</td>
+            <td>High - semantic body grouping</td>
+        </tr>
+        <tr>
+            <td><code>&lt;tfoot&gt;</code></td>
+            <td>Table Footer Section</td>
+            <td>Child of table</td>
+            <td>Medium - semantic footer grouping</td>
+        </tr>
+        <tr>
+            <td><code>&lt;caption&gt;</code></td>
+            <td>Table Title/Description</td>
+            <td>Child of table (first element)</td>
+            <td>Very High - improves accessibility</td>
+        </tr>
+        <tr>
+            <td><code>&lt;colgroup&gt;</code></td>
+            <td>Group columns</td>
+            <td>Child of table</td>
+            <td>Medium - for styling columns</td>
+        </tr>
+        <tr>
+            <td><code>&lt;col&gt;</code></td>
+            <td>Single column</td>
+            <td>Child of colgroup</td>
+            <td>Medium - for styling columns</td>
+        </tr>
+    </table>
+    
+    <h3>Important Table Attributes:</h3>
+    
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Element</th>
+            <th>Purpose</th>
+            <th>Example</th>
+            <th>SEO Impact</th>
+        </tr>
+        <tr>
+            <td><strong>id</strong></td>
+            <td>table, th, td</td>
+            <td>Unique identifier for CSS/JS</td>
+            <td><code>id="sales-table"</code></td>
+            <td>Medium - helps identify tables</td>
+        </tr>
+        <tr>
+            <td><strong>class</strong></td>
+            <td>table, tr, th, td</td>
+            <td>CSS class for styling</td>
+            <td><code>class="data-table"</code></td>
+            <td>Low - styling only</td>
+        </tr>
+        <tr>
+            <td><strong>scope</strong></td>
+            <td>th</td>
+            <td>Defines header scope</td>
+            <td><code>scope="col"</code></td>
+            <td>Very High - accessibility crucial</td>
+        </tr>
+        <tr>
+            <td><strong>colspan</strong></td>
+            <td>td, th</td>
+            <td>Cell spans multiple columns</td>
+            <td><code>colspan="2"</code></td>
+            <td>Low - structure only</td>
+        </tr>
+        <tr>
+            <td><strong>rowspan</strong></td>
+            <td>td, th</td>
+            <td>Cell spans multiple rows</td>
+            <td><code>rowspan="2"</code></td>
+            <td>Low - structure only</td>
+        </tr>
+        <tr>
+            <td><strong>headers</strong></td>
+            <td>td</td>
+            <td>Associates cell with header</td>
+            <td><code>headers="col-name"</code></td>
+            <td>Very High - accessibility</td>
+        </tr>
+        <tr>
+            <td><strong>border</strong></td>
+            <td>table</td>
+            <td>Draws border around table (deprecated - use CSS)</td>
+            <td><code>border="1"</code></td>
+            <td>Low - use CSS instead</td>
+        </tr>
+        <tr>
+            <td><strong>summary</strong></td>
+            <td>table</td>
+            <td>Describes table purpose (deprecated - use caption)</td>
+            <td><code>summary="Sales data"</code></td>
+            <td>Medium - use caption instead</td>
+        </tr>
+    </table>
+    
+    
+    <!-- ========================================
+         DETAILED ATTRIBUTE EXPLANATIONS
+         ======================================== -->
+    
+    <h2>Detailed Attribute Explanations</h2>
+    
+    <h3>1. scope Attribute (CRITICAL - Accessibility & SEO)</h3>
+    <div class="success-box">
+        <p>
+            <strong>Purpose:</strong> Defines which cells a header applies to<br>
+            <strong>SEO Impact:</strong> VERY HIGH - Essential for accessibility and screen readers<br>
+            <strong>Values:</strong> "col", "row", "colgroup", "rowgroup"
+        </p>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;!-- Column header --&gt;<br>
+            &lt;th scope="col"&gt;Product Name&lt;/th&gt;<br>
+            <br>
+            &lt;!-- Row header --&gt;<br>
+            &lt;th scope="row"&gt;January&lt;/th&gt;<br>
+            <br>
+            &lt;!-- Column group header --&gt;<br>
+            &lt;th scope="colgroup"&gt;Q1 Sales&lt;/th&gt;<br>
+            <br>
+            &lt;!-- Row group header --&gt;<br>
+            &lt;th scope="rowgroup"&gt;North Region&lt;/th&gt;
+        </div>
+        <p>
+            <strong>Why it matters:</strong> Screen readers use scope to understand table relationships. 
+            Users with visual impairments depend on proper scope attributes.
+        </p>
+    </div>
+    
+    <h3>2. caption Element (CRITICAL - SEO)</h3>
+    <div class="success-box">
+        <p>
+            <strong>Purpose:</strong> Provides title and description for table<br>
+            <strong>SEO Impact:</strong> VERY HIGH - Improves table context and accessibility
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Always include caption for data tables</li>
+            <li>✓ Make caption descriptive</li>
+            <li>✓ Use first child of table element</li>
+            <li>✓ Include relevant keywords</li>
+            <li>✗ Don't make caption too vague</li>
+            <li>✗ Don't omit for important data tables</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;!-- GOOD: Descriptive caption --&gt;<br>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;Monthly Sales Revenue by Product Category (2024)&lt;/caption&gt;<br>
+            &nbsp;&nbsp;&lt;thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+            &nbsp;&nbsp;&lt;/thead&gt;<br>
+            &lt;/table&gt;<br>
+            <br>
+            &lt;!-- BAD: Vague caption --&gt;<br>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;Data&lt;/caption&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+    
+    <h3>3. colspan & rowspan Attributes</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Cells spanning multiple columns/rows<br>
+            <strong>SEO Impact:</strong> LOW - Structure only
+        </p>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;!-- Cell spanning 2 columns --&gt;<br>
+            &lt;th colspan="2"&gt;Q1 Results&lt;/th&gt;<br>
+            <br>
+            &lt;!-- Cell spanning 3 rows --&gt;<br>
+            &lt;th rowspan="3" scope="row"&gt;Product A&lt;/th&gt;<br>
+            <br>
+            &lt;!-- Cell spanning 2x2 --&gt;<br>
+            &lt;td colspan="2" rowspan="2"&gt;Combined Data&lt;/td&gt;
+        </div>
+    </div>
+    
+    <h3>4. headers Attribute (Accessibility)</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Associates data cell with header cell(s)<br>
+            <strong>SEO Impact:</strong> VERY HIGH - Critical for screen readers
+        </p>
+        <p><strong>When to use:</strong> Complex tables with multiple headers</p>
+        <p><strong>Example:</strong></p>
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th id="col1"&gt;Product&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th id="col2"&gt;Price&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td headers="col1"&gt;Widget A&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td headers="col2"&gt;$29.99&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+    
+    <h3>5. thead, tbody, tfoot Elements (Semantic HTML)</h3>
+    <div class="success-box">
+        <p>
+            <strong>Purpose:</strong> Semantically group table sections<br>
+            <strong>SEO Impact:</strong> HIGH - Improves structure and accessibility
+        </p>
+        <p><strong>Benefits:</strong></p>
+        <ul>
+            <li>✓ Improves accessibility</li>
+            <li>✓ Better CSS styling</li>
+            <li>✓ Improves table semantics</li>
+            <li>✓ Better printing layout</li>
+            <li>✓ Helps search engines understand table</li>
+        </ul>
+        <p><strong>Complete Example:</strong></p>
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;Employee Salary Data&lt;/caption&gt;<br>
+            &nbsp;&nbsp;&lt;thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Name&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Position&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Salary&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/thead&gt;<br>
+            &nbsp;&nbsp;&lt;tbody&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;John Smith&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Manager&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$75,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tbody&gt;<br>
+            &nbsp;&nbsp;&lt;tfoot&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row"&gt;Total&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td colspan="2"&gt;$75,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tfoot&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         TABLE STYLING WITH CSS
+         ======================================== -->
+    
+    <h2>Styling Tables with CSS</h2>
+    
+    <div class="info-box">
+        <p><strong>Common CSS for Tables:</strong></p>
+        <div class="example">
+            /* Basic table styling */<br>
+            table {<br>
+            &nbsp;&nbsp;width: 100%;<br>
+            &nbsp;&nbsp;border-collapse: collapse;<br>
+            &nbsp;&nbsp;margin: 20px 0;<br>
+            &nbsp;&nbsp;font-size: 14px;<br>
+            &nbsp;&nbsp;box-shadow: 0 2px 4px rgba(0,0,0,0.1);<br>
+            }<br>
+            <br>
+            /* Header styling */<br>
+            thead {<br>
+            &nbsp;&nbsp;background-color: #34495e;<br>
+            &nbsp;&nbsp;color: white;<br>
+            }<br>
+            <br>
+            th {<br>
+            &nbsp;&nbsp;padding: 12px;<br>
+            &nbsp;&nbsp;text-align: left;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+            }<br>
+            <br>
+            /* Data cell styling */<br>
+            td {<br>
+            &nbsp;&nbsp;padding: 10px 12px;<br>
+            &nbsp;&nbsp;border-bottom: 1px solid #ddd;<br>
+            }<br>
+            <br>
+            /* Alternating row colors */<br>
+            tbody tr:nth-child(odd) {<br>
+            &nbsp;&nbsp;background-color: #f9f9f9;<br>
+            }<br>
+            <br>
+            tbody tr:hover {<br>
+            &nbsp;&nbsp;background-color: #f0f0f0;<br>
+            }<br>
+            <br>
+            /* Footer styling */<br>
+            tfoot {<br>
+            &nbsp;&nbsp;background-color: #ecf0f1;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+            }<br>
+            <br>
+            /* Caption styling */<br>
+            caption {<br>
+            &nbsp;&nbsp;caption-side: top;<br>
+            &nbsp;&nbsp;padding: 10px;<br>
+            &nbsp;&nbsp;font-weight: bold;<br>
+            &nbsp;&nbsp;color: #333;<br>
+            }<br>
+            <br>
+            /* Responsive table */<br>
+            @media (max-width: 768px) {<br>
+            &nbsp;&nbsp;table {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 12px;<br>
+            &nbsp;&nbsp;}<br>
+            &nbsp;&nbsp;th, td {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding: 8px;<br>
+            &nbsp;&nbsp;}<br>
+            }
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         RESPONSIVE TABLES
+         ======================================== -->
+    
+    <h2>Responsive Tables</h2>
+    
+    <div class="info-box">
+        <h3>Challenge:</h3>
+        <p>
+            Tables on mobile devices can be difficult to read. Need responsive design 
+            to work on all screen sizes.
+        </p>
+        <h3>Solution 1: Horizontal Scroll</h3>
+        <div class="example">
+            /* Wrap table in div for horizontal scroll */<br>
+            .table-container {<br>
+            &nbsp;&nbsp;overflow-x: auto;<br>
+            &nbsp;&nbsp;margin: 20px 0;<br>
+            }<br>
+            <br>
+            &lt;div class="table-container"&gt;<br>
+            &nbsp;&nbsp;&lt;table&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+            &nbsp;&nbsp;&lt;/table&gt;<br>
+            &lt;/div&gt;
+        </div>
+        <h3>Solution 2: Stacked Layout</h3>
+        <div class="example">
+            /* Stack table on mobile */<br>
+            @media (max-width: 768px) {<br>
+            &nbsp;&nbsp;table, thead, tbody, th, td, tr {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;display: block;<br>
+            &nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;thead tr {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;top: -9999px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;left: -9999px;<br>
+            &nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;tr {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;margin-bottom: 15px;<br>
+            &nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;td {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;position: relative;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;padding-left: 50%;<br>
+            &nbsp;&nbsp;}<br>
+            <br>
+            &nbsp;&nbsp;td:before {<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;content: attr(data-label);<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;position: absolute;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;left: 6px;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;font-weight: bold;<br>
+            &nbsp;&nbsp;}<br>
+            }
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         BEST PRACTICES FOR TABLES & SEO
+         ======================================== -->
+    
+    <h2>Best Practices for Tables & SEO</h2>
+    
+    <h3>1. Always Use Semantic Table Elements</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Semantic HTML helps search engines understand table structure<br>
+            <strong>SEO Impact:</strong> VERY HIGH - Critical for accessibility and crawling
+        </p>
+        <div class="comparison">
+            <div class="comparison-item good-example">
+                <strong>✓ GOOD (Semantic):</strong><br>
+                <div class="example">
+                    &lt;table&gt;<br>
+                    &nbsp;&nbsp;&lt;caption&gt;Sales Data&lt;/caption&gt;<br>
+                    &nbsp;&nbsp;&lt;thead&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Month&lt;/th&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&lt;/thead&gt;<br>
+                    &nbsp;&nbsp;&lt;tbody&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                    &nbsp;&nbsp;&lt;/tbody&gt;<br>
+                    &lt;/table&gt;
+                </div>
+            </div>
+            <div class="comparison-item bad-example">
+                <strong>✗ BAD (Non-semantic):</strong><br>
+                <div class="example">
+                    &lt;table&gt;<br>
+                    &nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Month&lt;/td&gt;<br>
+                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                    &nbsp;&nbsp;&lt;tr&gt;<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;...<br>
+                    &nbsp;&nbsp;&lt;/tr&gt;<br>
+                    &lt;/table&gt;
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <h3>2. Use scope Attribute on Headers</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Improves accessibility for screen readers<br>
+            <strong>SEO Impact:</strong> VERY HIGH - Essential for screen reader users
+        </p>
+        <ul>
+            <li>✓ Use scope="col" for column headers</li>
+            <li>✓ Use scope="row" for row headers</li>
+            <li>✓ Use scope="colgroup" or "rowgroup" for grouped headers</li>
+            <li>✗ Don't omit scope on th elements</li>
+        </ul>
+    </div>
+    
+    <h3>3. Always Include Caption</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Caption explains table purpose and improves accessibility<br>
+            <strong>SEO Impact:</strong> VERY HIGH - Improves context
+        </p>
+        <ul>
+            <li>✓ Write descriptive captions</li>
+            <li>✓ Include relevant keywords</li>
+            <li>✓ Keep caption concise but informative</li>
+            <li>✗ Don't leave out captions</li>
+            <li>✗ Don't make captions too vague</li>
+        </ul>
+    </div>
+    
+    <h3>4. Use thead, tbody, tfoot</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Improves structure, styling, and accessibility<br>
+            <strong>SEO Impact:</strong> HIGH - Better table semantics
+        </p>
+        <ul>
+            <li>✓ Group header rows in thead</li>
+            <li>✓ Group data rows in tbody</li>
+            <li>✓ Group footer rows in tfoot</li>
+            <li>✗ Don't mix sections without grouping</li>
+        </ul>
+    </div>
+    
+    <h3>5. Make Tables Responsive</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Mobile users must be able to read tables easily<br>
+            <strong>SEO Impact:</strong> HIGH - Mobile-first indexing is critical
+        </p>
+        <ul>
+            <li>✓ Use CSS media queries for responsive design</li>
+            <li>✓ Add horizontal scroll wrapper for smaller screens</li>
+            <li>✓ Stack tables vertically on mobile</li>
+            <li>✓ Use data-label attributes with mobile styling</li>
+            <li>✗ Don't make tables unreadable on mobile</li>
+        </ul>
+    </div>
+    
+    <h3>6. Add Clear Headers and Labels</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Headers help users and search engines understand data<br>
+            <strong>SEO Impact:</strong> HIGH - Improves content understanding
+        </p>
+        <ul>
+            <li>✓ Use descriptive header text</li>
+            <li>✓ Include relevant keywords in headers</li>
+            <li>✓ Make headers stand out visually</li>
+            <li>✗ Don't use generic headers like "Data" or "Info"</li>
+        </ul>
+    </div>
+    
+    <h3>7. Avoid Layout Tables</h3>
+    <div class="warning-box">
+        <p>
+            <strong>Why:</strong> Tables should only be used for tabular data, not layout<br>
+            <strong>SEO Impact:</strong> HIGH - Layout tables confuse search engines and screen readers
+        </p>
+        <ul>
+            <li>✗ NEVER use tables for page layout</li>
+            <li>✗ NEVER use tables for content positioning</li>
+            <li>✓ Use CSS Flexbox or Grid for layout instead</li>
+            <li>✓ Only use tables for actual data</li>
+        </ul>
+    </div>
+    
+    <h3>8. Use Consistent Formatting</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Consistent formatting helps users and search engines understand data<br>
+            <strong>SEO Impact:</strong> MEDIUM - Improves readability
+        </p>
+        <ul>
+            <li>✓ Format numbers consistently (decimals, currency)</li>
+            <li>✓ Use consistent date formats</li>
+            <li>✓ Align similar data types the same way</li>
+            <li>✓ Use consistent spacing and padding</li>
+            <li>✗ Don't mix formatting styles</li>
+        </ul>
+    </div>
+    
+    <h3>9. Keep Tables Focused and Simple</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Complex tables are hard to read and understand<br>
+            <strong>SEO Impact:</strong> MEDIUM - Improves user engagement
+        </p>
+        <ul>
+            <li>✓ Keep tables reasonably sized (10-15 columns max)</li>
+            <li>✓ Break large tables into multiple smaller tables</li>
+            <li>✓ Use clear, concise cell content</li>
+            <li>✗ Don't create overly complex tables</li>
+            <li>✗ Don't cram too much data into one table</li>
+        </ul>
+    </div>
+    
+    <h3>10. Provide Summary or Context</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Context helps users understand table importance<br>
+            <strong>SEO Impact:</strong> MEDIUM - Provides additional content
+        </p>
+        <ul>
+            <li>✓ Add paragraph before table explaining it</li>
+            <li>✓ Include summary with key takeaways</li>
+            <li>✓ Link to detailed explanation if needed</li>
+            <li>✗ Don't drop tables without context</li>
+        </ul>
+    </div>
+    
+    
+    <!-- ========================================
+         COMPLETE TABLE EXAMPLES
+         ======================================== -->
+    
+    <h2>Complete Table Examples</h2>
+    
+    <h3>✓ CORRECT - SEO Optimized Table</h3>
+    <div class="success-box">
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;Monthly Revenue Comparison by Product (Q1 2024)&lt;/caption&gt;<br>
+            &nbsp;&nbsp;&lt;thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Month&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Product A&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Product B&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Product C&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="col"&gt;Total&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/thead&gt;<br>
+            &nbsp;&nbsp;&lt;tbody&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row"&gt;January&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$50,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$35,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$25,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$110,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row"&gt;February&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$55,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$40,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$28,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$123,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tbody&gt;<br>
+            &nbsp;&nbsp;&lt;tfoot&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope="row"&gt;Total&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$105,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$75,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$53,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$233,000&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tfoot&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+    
+    <h3>✗ INCORRECT - Common Table Mistakes</h3>
+    <div class="warning-box">
+        <div class="example">
+            &lt;!-- BAD: No caption --&gt;<br>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Month&lt;/td&gt;&lt;!-- Should be th --&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Sales&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;<br>
+            <br>
+            &lt;!-- BAD: No scope attributes --&gt;<br>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Name&lt;/th&gt;&lt;!-- Missing scope --&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;<br>
+            <br>
+            &lt;!-- BAD: Not separated into sections --&gt;<br>
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header&lt;/th&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;&lt;!-- No tbody/thead/tfoot --&gt;<br>
+            &lt;/table&gt;<br>
+            <br>
+            &lt;!-- BAD: Using table for layout --&gt;<br>
+            &lt;table&gt;&lt;!-- NEVER use for layout! --&gt;<br>
+            &nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Sidebar&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Main Content&lt;/td&gt;<br>
+            &nbsp;&nbsp;&lt;/tr&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         COMPLEX TABLE EXAMPLE
+         ======================================== -->
+    
+    <h2>Complex Table Example with Headers</h2>
+    
+    <div class="info-box">
+        <p>
+            <strong>For tables with multiple header levels, use headers attribute:</strong>
+        </p>
+        <div class="example">
+            &lt;table&gt;<br>
+            &nbsp;&nbsp;&lt;caption&gt;Student Test Scores&lt;/caption&gt;<br>
+            &nbsp;&nbsp;&lt;thead&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th id="name" scope="col"&gt;Student Name&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th id="math" scope="col"&gt;Mathematics&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th id="english" scope="col"&gt;English&lt;/th&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/thead&gt;<br>
+            &nbsp;&nbsp;&lt;tbody&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td headers="name"&gt;John Doe&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td headers="math"&gt;95&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td headers="english"&gt;88&lt;/td&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;<br>
+            &nbsp;&nbsp;&lt;/tbody&gt;<br>
+            &lt;/table&gt;
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         TABLE SEO CHECKLIST
+         ======================================== -->
+    
+    <h2>Table SEO Checklist</h2>
+    
+    <div class="success-box">
+        <h3>Before Publishing Tables:</h3>
+        <ul>
+            <li>☑ Table has descriptive caption</li>
+            <li>☑ All headers use &lt;th&gt; (not &lt;td&gt;)</li>
+            <li>☑ All &lt;th&gt; elements have scope attribute</li>
+            <li>☑ Table uses thead, tbody, tfoot sections</li>
+            <li>☑ Complex tables use headers attribute</li>
+            <li>☑ Table is NOT used for layout</li>
+            <li>☑ Table is responsive on mobile</li>
+            <li>☑ Cell content is consistent and clear</li>
+            <li>☑ Table has introductory paragraph</li>
+            <li>☑ Headers are descriptive with keywords</li>
+            <li>☑ Data is organized logically</li>
+            <li>☑ Table is not overly complex (max 15 cols)</li>
+            <li>☑ Large tables broken into smaller ones</li>
+            <li>☑ Table tested with screen reader</li>
+            <li>☑ Summary provided for complex tables</li>
+            <li>☑ Mobile tables are readable</li>
+            <li>☑ All data is accurate and up-to-date</li>
+        </ul>
+    </div>
+    
+    
+    <!-- ========================================
+         COMMON TABLE USE CASES
+         ======================================== -->
+    
+    <h2>Common Table Use Cases</h2>
+    
+    <h3>Product Comparison Tables</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Compare features across multiple products<br>
+            <strong>Content:</strong> Product names, features, prices, ratings
+        </p>
+    </div>
+    
+    <h3>Pricing Tables</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Show pricing plans and features<br>
+            <strong>Content:</strong> Plan names, features, prices, call-to-action
+        </p>
+    </div>
+    
+    <h3>Data and Statistics</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Display numerical data and statistics<br>
+            <strong>Content:</strong> Metrics, percentages, rankings
+        </p>
+    </div>
+    
+    <h3>Schedules and Timelines</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Show events, classes, or appointments<br>
+            <strong>Content:</strong> Times, dates, locations
+        </p>
+    </div>
+    
+    <h3>Specification Sheets</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> List technical specifications<br>
+            <strong>Content:</strong> Attributes and their values
+        </p>
+    </div>
+    
+    <h3>Comparison Tables</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Compare options side-by-side<br>
+            <strong>Content:</strong> Different products/services with features
+        </p>
+    </div>
+    
+    </div> <!-- End container -->
+
+</body>
+</html>

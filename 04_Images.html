@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Image Tag - Complete Guide & SEO Best Practices</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+        
+        .info-box {
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #856404;
+        }
+        
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #155724;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .example {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+        }
+        
+        .demo-image {
+            max-width: 100%;
+            height: auto;
+            margin: 15px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+    <!-- ========================================
+         WHAT IS THE IMAGE TAG?
+         ======================================== -->
+    
+    <h1>HTML Image Tag (&lt;img&gt;) - Complete Guide & SEO Best Practices</h1>
+    
+    <h2>What is the Image Tag?</h2>
+    
+    <div class="info-box">
+        <h3>Image Tag Definition:</h3>
+        <p>
+            The <code>&lt;img&gt;</code> tag is an HTML element used to embed images in web pages.
+            It is a <strong>self-closing (void) tag</strong> that does not have a closing tag.
+        </p>
+        <p>
+            <strong>Basic Syntax:</strong><br>
+            <code>&lt;img src="image.jpg" alt="Description of image"&gt;</code>
+        </p>
+        <p>
+            <strong>Key Characteristics:</strong><br>
+            • Self-closing tag (no closing tag needed)<br>
+            • Inline element (doesn't create line breaks)<br>
+            • Displays images: JPG, PNG, GIF, WebP, SVG, etc.<br>
+            • Requires src attribute (path to image)<br>
+            • Should have alt attribute (accessibility & SEO)<br>
+            • Can be responsive with CSS and attributes
+        </p>
+    </div>
+    
+    
+    <!-- ========================================
+         IMAGE TAG ATTRIBUTES
+         ======================================== -->
+    
+    <h2>Image Tag Attributes</h2>
+    
+    <h3>Essential Attributes:</h3>
+    
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Purpose</th>
+            <th>Required?</th>
+            <th>Example</th>
+            <th>SEO Impact</th>
+        </tr>
+        <tr>
+            <td><strong>src</strong></td>
+            <td>Path to the image file</td>
+            <td>YES</td>
+            <td><code>src="image.jpg"</code></td>
+            <td>Critical - tells browser where image is</td>
+        </tr>
+        <tr>
+            <td><strong>alt</strong></td>
+            <td>Alternative text describing image</td>
+            <td>YES*</td>
+            <td><code>alt="A red apple"</code></td>
+            <td>Very High - essential for SEO & accessibility</td>
+        </tr>
+        <tr>
+            <td><strong>title</strong></td>
+            <td>Tooltip text on hover</td>
+            <td>NO</td>
+            <td><code>title="Click to enlarge"</code></td>
+            <td>Medium - improves user experience</td>
+        </tr>
+        <tr>
+            <td><strong>width</strong></td>
+            <td>Image width in pixels</td>
+            <td>NO</td>
+            <td><code>width="300"</code></td>
+            <td>High - prevents layout shift (Core Web Vitals)</td>
+        </tr>
+        <tr>
+            <td><strong>height</strong></td>
+            <td>Image height in pixels</td>
+            <td>NO</td>
+            <td><code>height="200"</code></td>
+            <td>High - prevents layout shift (Core Web Vitals)</td>
+        </tr>
+        <tr>
+            <td><strong>loading</strong></td>
+            <td>Lazy loading strategy</td>
+            <td>NO</td>
+            <td><code>loading="lazy"</code></td>
+            <td>High - improves page speed (Core Web Vitals)</td>
+        </tr>
+        <tr>
+            <td><strong>srcset</strong></td>
+            <td>Multiple image sources for responsive design</td>
+            <td>NO</td>
+            <td><code>srcset="small.jpg 480w, large.jpg 1200w"</code></td>
+            <td>High - improves performance on different devices</td>
+        </tr>
+        <tr>
+            <td><strong>sizes</strong></td>
+            <td>Image sizes for different viewports</td>
+            <td>NO</td>
+            <td><code>sizes="(max-width: 600px) 100vw, 50vw"</code></td>
+            <td>High - optimizes responsive images</td>
+        </tr>
+        <tr>
+            <td><strong>usemap</strong></td>
+            <td>Associates image with image map</td>
+            <td>NO</td>
+            <td><code>usemap="#map-name"</code></td>
+            <td>Low - for interactive image maps</td>
+        </tr>
+        <tr>
+            <td><strong>ismap</strong></td>
+            <td>Server-side image map</td>
+            <td>NO</td>
+            <td><code>ismap</code></td>
+            <td>Very Low - rarely used</td>
+        </tr>
+    </table>
+    
+    
+    <!-- ========================================
+         DETAILED ATTRIBUTE EXPLANATIONS
+         ======================================== -->
+    
+    <h2>Detailed Attribute Explanations</h2>
+    
+    <h3>1. src Attribute (REQUIRED)</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Specifies the path to the image file<br>
+            <strong>Required:</strong> YES - image won't display without it
+        </p>
+        <p><strong>Types of Image Paths:</strong></p>
+        <div class="example">
+            &lt;!-- Absolute path (full URL) --&gt;<br>
+            &lt;img src="https://example.com/images/photo.jpg" alt="Photo"&gt;<br>
+            <br>
+            &lt;!-- Relative path (same directory) --&gt;<br>
+            &lt;img src="image.jpg" alt="Image"&gt;<br>
+            <br>
+            &lt;!-- Relative path (subdirectory) --&gt;<br>
+            &lt;img src="images/photo.jpg" alt="Photo"&gt;<br>
+            <br>
+            &lt;!-- Relative path (parent directory) --&gt;<br>
+            &lt;img src="../images/photo.jpg" alt="Photo"&gt;<br>
+            <br>
+            &lt;!-- Data URL (embedded image) --&gt;<br>
+            &lt;img src="data:image/png;base64,iVBORw0KGgo..." alt="Icon"&gt;
+        </div>
+        <p>
+            <strong>SEO Note:</strong> Use descriptive filenames. Instead of "photo123.jpg", 
+            use "red-apple-fruit.jpg" for better keyword relevance.
+        </p>
+    </div>
+    
+    <h3>2. alt Attribute (CRITICAL - Should Always Be Used)</h3>
+    <div class="success-box">
+        <p>
+            <strong>Purpose:</strong> Provides alternative text when image can't be displayed<br>
+            <strong>SEO Impact:</strong> VERY HIGH - One of the most important image SEO factors<br>
+            <strong>Accessibility:</strong> Essential for screen readers
+        </p>
+        <p><strong>When alt text is displayed:</strong></p>
+        <ul>
+            <li>Image file is missing or broken</li>
+            <li>User has disabled images in browser</li>
+            <li>Page is loading (before image loads)</li>
+            <li>Screen reader is being used (accessibility)</li>
+            <li>Search engines crawl the page</li>
+        </ul>
+        <p><strong>How to write effective alt text:</strong></p>
+        <ul>
+            <li>✓ Be descriptive and specific</li>
+            <li>✓ Include relevant keywords naturally</li>
+            <li>✓ Keep it concise (usually under 125 characters)</li>
+            <li>✓ Describe the image purpose, not just "image"</li>
+            <li>✓ For decorative images, use empty alt=""</li>
+            <li>✗ Avoid "image of", "picture of", "photo of" at start</li>
+            <li>✗ Don't keyword stuff</li>
+            <li>✗ Don't duplicate page content in alt text</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;!-- GOOD: Specific and descriptive --&gt;<br>
+            &lt;img src="fresh-organic-tomatoes.jpg" <br>
+            &nbsp;&nbsp;alt="Fresh ripe red tomatoes in wooden basket"&gt;<br>
+            <br>
+            &lt;!-- GOOD: Includes relevant keywords --&gt;<br>
+            &lt;img src="web-design-process.png" <br>
+            &nbsp;&nbsp;alt="Web design process diagram showing wireframe, design, and development phases"&gt;<br>
+            <br>
+            &lt;!-- GOOD: Decorative image (empty alt) --&gt;<br>
+            &lt;img src="decorative-border.svg" alt=""&gt;<br>
+            <br>
+            &lt;!-- BAD: Too vague --&gt;<br>
+            &lt;img src="photo.jpg" alt="image"&gt;<br>
+            <br>
+            &lt;!-- BAD: Keyword stuffing --&gt;<br>
+            &lt;img src="tomato.jpg" alt="fresh organic tomatoes red vegetables produce"&gt;
+        </div>
+    </div>
+    
+    <h3>3. title Attribute (Improves UX)</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Provides tooltip text on hover<br>
+            <strong>SEO Impact:</strong> MEDIUM - Helps with user engagement
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Add descriptive title for better UX</li>
+            <li>✓ Different from alt text (provides additional info)</li>
+            <li>✓ Keep under 100 characters</li>
+            <li>✗ Don't duplicate alt text exactly</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;img src="office-team.jpg" <br>
+            &nbsp;&nbsp;alt="Office team collaborating on project" <br>
+            &nbsp;&nbsp;title="Click to see full team directory"&gt;
+        </div>
+    </div>
+    
+    <h3>4. width & height Attributes (Prevents Layout Shift)</h3>
+    <div class="success-box">
+        <p>
+            <strong>Purpose:</strong> Specifies image dimensions<br>
+            <strong>SEO Impact:</strong> HIGH - Prevents Cumulative Layout Shift (CLS)<br>
+            <strong>Performance Impact:</strong> Improves Core Web Vitals score
+        </p>
+        <p><strong>Why it matters:</strong></p>
+        <ul>
+            <li>✓ Browser reserves space before image loads</li>
+            <li>✓ Prevents page jumping when image appears</li>
+            <li>✓ Improves Core Web Vitals (CLS metric)</li>
+            <li>✓ Better user experience</li>
+        </ul>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Always include width and height</li>
+            <li>✓ Use actual image dimensions</li>
+            <li>✓ Maintain aspect ratio with CSS</li>
+            <li>✗ Don't set arbitrary dimensions</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;!-- GOOD: With dimensions --&gt;<br>
+            &lt;img src="photo.jpg" <br>
+            &nbsp;&nbsp;alt="Team photo" <br>
+            &nbsp;&nbsp;width="800" <br>
+            &nbsp;&nbsp;height="600"&gt;<br>
+            <br>
+            &lt;!-- CSS for responsive images with fixed dimensions --&gt;<br>
+            &lt;style&gt;<br>
+            img {<br>
+            &nbsp;&nbsp;width: 100%;<br>
+            &nbsp;&nbsp;height: auto;<br>
+            &nbsp;&nbsp;max-width: 800px;<br>
+            }<br>
+            &lt;/style&gt;
+        </div>
+    </div>
+    
+    <h3>5. loading Attribute (Lazy Loading)</h3>
+    <div class="success-box">
+        <p>
+            <strong>Purpose:</strong> Controls how images are loaded<br>
+            <strong>SEO Impact:</strong> HIGH - Improves page speed and Largest Contentful Paint (LCP)<br>
+            <strong>Performance Impact:</strong> Significant improvement for mobile users
+        </p>
+        <p><strong>Loading Values:</strong></p>
+        <ul>
+            <li><code>loading="eager"</code> - Load immediately (default)</li>
+            <li><code>loading="lazy"</code> - Load only when approaching viewport</li>
+        </ul>
+        <p><strong>When to use lazy loading:</strong></p>
+        <ul>
+            <li>✓ Images below the fold (not visible initially)</li>
+            <li>✓ Multiple images on page</li>
+            <li>✓ Mobile-heavy websites</li>
+            <li>✗ Images above the fold (hero images)</li>
+            <li>✗ Critical images for page rendering</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;!-- Load immediately (above the fold) --&gt;<br>
+            &lt;img src="hero.jpg" alt="Hero image" loading="eager"&gt;<br>
+            <br>
+            &lt;!-- Lazy load (below the fold) --&gt;<br>
+            &lt;img src="product-image.jpg" <br>
+            &nbsp;&nbsp;alt="Product photo" <br>
+            &nbsp;&nbsp;loading="lazy"&gt;<br>
+            <br>
+            &lt;!-- Lazy load with placeholder --&gt;<br>
+            &lt;img src="image.jpg" <br>
+            &nbsp;&nbsp;alt="Product" <br>
+            &nbsp;&nbsp;loading="lazy" <br>
+            &nbsp;&nbsp;style="background: #f0f0f0;"&gt;
+        </div>
+    </div>
+    
+    <h3>6. srcset Attribute (Responsive Images)</h3>
+    <div class="success-box">
+        <p>
+            <strong>Purpose:</strong> Provides multiple image sources for different screen sizes/resolutions<br>
+            <strong>SEO Impact:</strong> HIGH - Improves mobile performance and rankings<br>
+            <strong>Performance Impact:</strong> Reduces download size for smaller screens
+        </p>
+        <p><strong>Syntax:</strong></p>
+        <div class="example">
+            &lt;img src="default.jpg" <br>
+            &nbsp;&nbsp;srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1200w" <br>
+            &nbsp;&nbsp;alt="Responsive image"&gt;
+        </div>
+        <p><strong>How it works:</strong></p>
+        <ul>
+            <li>Browser selects best image based on screen width</li>
+            <li>480w = image for 480px width devices</li>
+            <li>800w = image for 800px width devices</li>
+            <li>1200w = image for 1200px+ width devices</li>
+        </ul>
+        <p><strong>Best Practices:</strong></p>
+        <div class="example">
+            &lt;!-- With sizes attribute for better control --&gt;<br>
+            &lt;img src="image.jpg" <br>
+            &nbsp;&nbsp;srcset="image-small.jpg 480w,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image-medium.jpg 800w,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image-large.jpg 1200w" <br>
+            &nbsp;&nbsp;sizes="(max-width: 600px) 100vw, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(max-width: 1200px) 50vw, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1200px" <br>
+            &nbsp;&nbsp;alt="Responsive product image"&gt;
+        </div>
+    </div>
+    
+    <h3>7. sizes Attribute (With srcset)</h3>
+    <div class="info-box">
+        <p>
+            <strong>Purpose:</strong> Tells browser how much space image will take on different screen sizes<br>
+            <strong>Used with:</strong> srcset attribute (not useful alone)
+        </p>
+        <p><strong>Syntax Explanation:</strong></p>
+        <ul>
+            <li><code>(max-width: 600px) 100vw</code> - On small screens, use 100% of viewport width</li>
+            <li><code>(max-width: 1200px) 50vw</code> - On medium screens, use 50% of viewport width</li>
+            <li><code>1200px</code> - On large screens, use fixed 1200px width</li>
+        </ul>
+    </div>
+    
+    
+    <!-- ========================================
+         IMAGE TAG STYLING WITH CSS
+         ======================================== -->
+    
+    <h2>Styling Images with CSS</h2>
+    
+    <div class="info-box">
+        <p><strong>Common CSS for Responsive Images:</strong></p>
+        <div class="example">
+            /* Basic responsive images */<br>
+            img {<br>
+            &nbsp;&nbsp;max-width: 100%;<br>
+            &nbsp;&nbsp;height: auto;<br>
+            &nbsp;&nbsp;display: block;<br>
+            }<br>
+            <br>
+            /* Image with border and shadow */<br>
+            img {<br>
+            &nbsp;&nbsp;border: 1px solid #ddd;<br>
+            &nbsp;&nbsp;box-shadow: 0 2px 8px rgba(0,0,0,0.1);<br>
+            &nbsp;&nbsp;border-radius: 8px;<br>
+            }<br>
+            <br>
+            /* Image hover effect */<br>
+            img:hover {<br>
+            &nbsp;&nbsp;transform: scale(1.05);<br>
+            &nbsp;&nbsp;transition: transform 0.3s ease;<br>
+            }<br>
+            <br>
+            /* Centered image */<br>
+            img {<br>
+            &nbsp;&nbsp;display: block;<br>
+            &nbsp;&nbsp;margin: 0 auto;<br>
+            }<br>
+            <br>
+            /* Image gallery grid */<br>
+            .gallery {<br>
+            &nbsp;&nbsp;display: grid;<br>
+            &nbsp;&nbsp;grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));<br>
+            &nbsp;&nbsp;gap: 20px;<br>
+            }
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         IMAGE FORMATS & SEO
+         ======================================== -->
+    
+    <h2>Image Formats & SEO</h2>
+    
+    <table>
+        <tr>
+            <th>Format</th>
+            <th>File Size</th>
+            <th>Quality</th>
+            <th>Best For</th>
+            <th>SEO Impact</th>
+        </tr>
+        <tr>
+            <td><strong>JPEG</strong></td>
+            <td>Small</td>
+            <td>Good</td>
+            <td>Photos, complex images</td>
+            <td>Good - compressed but quality</td>
+        </tr>
+        <tr>
+            <td><strong>PNG</strong></td>
+            <td>Large</td>
+            <td>Excellent</td>
+            <td>Graphics, logos, transparency</td>
+            <td>Good - lossless quality</td>
+        </tr>
+        <tr>
+            <td><strong>WebP</strong></td>
+            <td>Very Small</td>
+            <td>Excellent</td>
+            <td>Modern browsers, web use</td>
+            <td>Excellent - best for performance</td>
+        </tr>
+        <tr>
+            <td><strong>GIF</strong></td>
+            <td>Medium</td>
+            <td>Good</td>
+            <td>Animations, simple graphics</td>
+            <td>Fair - avoid for photos</td>
+        </tr>
+        <tr>
+            <td><strong>SVG</strong></td>
+            <td>Small</td>
+            <td>Excellent</td>
+            <td>Icons, logos, vector graphics</td>
+            <td>Good - scalable, responsive</td>
+        </tr>
+    </table>
+    
+    <div class="success-box">
+        <h3>✓ Recommended Format Strategy:</h3>
+        <div class="example">
+            &lt;!-- Use picture element for best compatibility --&gt;<br>
+            &lt;picture&gt;<br>
+            &nbsp;&nbsp;&lt;source srcset="image.webp" type="image/webp"&gt;<br>
+            &nbsp;&nbsp;&lt;source srcset="image.jpg" type="image/jpeg"&gt;<br>
+            &nbsp;&nbsp;&lt;img src="image.jpg" alt="Product image" loading="lazy"&gt;<br>
+            &lt;/picture&gt;
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         BEST PRACTICES FOR IMAGE TAG & SEO
+         ======================================== -->
+    
+    <h2>Best Practices for Image Tag & SEO</h2>
+    
+    <h3>1. Optimize Image File Size</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Large images slow down page load time<br>
+            <strong>SEO Impact:</strong> HIGH - Page speed is a ranking factor
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Compress images before uploading</li>
+            <li>✓ Use appropriate format (WebP for modern browsers)</li>
+            <li>✓ Resize images to actual display size</li>
+            <li>✓ Use tools: TinyPNG, ImageOptim, Squoosh</li>
+            <li>✗ Don't upload raw, unoptimized images</li>
+            <li>✗ Don't use oversized images scaled with CSS</li>
+        </ul>
+        <p><strong>Target File Sizes:</strong></p>
+        <ul>
+            <li>Hero images: 100-200 KB</li>
+            <li>Product images: 50-100 KB</li>
+            <li>Thumbnails: 20-50 KB</li>
+            <li>Icons: 5-20 KB</li>
+        </ul>
+    </div>
+    
+    <h3>2. Use Descriptive Filenames</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Search engines read filenames for context<br>
+            <strong>SEO Impact:</strong> MEDIUM - Helps with image search ranking
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Use descriptive keywords in filename</li>
+            <li>✓ Use hyphens to separate words (not underscores)</li>
+            <li>✓ Keep filename concise but specific</li>
+            <li>✗ Avoid generic names (photo.jpg, image.png)</li>
+            <li>✗ Avoid dates or numbers (IMG_2024.jpg)</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            ✓ GOOD: red-leather-office-chair.jpg<br>
+            ✓ GOOD: italian-tomato-pasta-recipe.jpg<br>
+            ✓ GOOD: team-building-event-2024.jpg<br>
+            <br>
+            ✗ BAD: photo.jpg<br>
+            ✗ BAD: image_1.jpg<br>
+            ✗ BAD: IMG_20240115.jpg
+        </div>
+    </div>
+    
+    <h3>3. Write High-Quality Alt Text</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Alt text is crucial for accessibility AND SEO<br>
+            <strong>SEO Impact:</strong> VERY HIGH - Major ranking factor
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Be specific and descriptive</li>
+            <li>✓ Include relevant keywords naturally</li>
+            <li>✓ Keep under 125 characters</li>
+            <li>✓ Describe image purpose and content</li>
+            <li>✓ Use decorative images with empty alt=""</li>
+            <li>✗ Avoid "image of", "picture of"</li>
+            <li>✗ Don't keyword stuff</li>
+        </ul>
+        <p><strong>Examples:</strong></p>
+        <div class="example">
+            &lt;!-- GOOD: Descriptive --&gt;<br>
+            &lt;img src="italian-pasta-dish.jpg" <br>
+            &nbsp;&nbsp;alt="Homemade fettuccine alfredo with fresh parmesan cheese"&gt;<br>
+            <br>
+            &lt;!-- GOOD: Context-aware --&gt;<br>
+            &lt;img src="office-workspace.jpg" <br>
+            &nbsp;&nbsp;alt="Modern home office with standing desk and natural lighting"&gt;<br>
+            <br>
+            &lt;!-- GOOD: Product alt text --&gt;<br>
+            &lt;img src="blue-running-shoes.jpg" <br>
+            &nbsp;&nbsp;alt="Blue mesh running shoes with cushioned sole, size 10"&gt;<br>
+            <br>
+            &lt;!-- GOOD: Decorative (empty alt) --&gt;<br>
+            &lt;img src="decorative-divider.svg" alt=""&gt;<br>
+            <br>
+            &lt;!-- BAD: Too generic --&gt;<br>
+            &lt;img src="shoes.jpg" alt="shoes"&gt;<br>
+            <br>
+            &lt;!-- BAD: Keyword stuffing --&gt;<br>
+            &lt;img src="shoes.jpg" alt="blue running shoes athletic footwear sports gear"&gt;
+        </div>
+    </div>
+    
+    <h3>4. Always Include width & height Attributes</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Prevents layout shift and improves Core Web Vitals<br>
+            <strong>SEO Impact:</strong> HIGH - Reduces Cumulative Layout Shift (CLS)
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Always include width and height</li>
+            <li>✓ Match actual image dimensions</li>
+            <li>✓ Use CSS for responsive sizing</li>
+            <li>✗ Don't omit dimensions</li>
+            <li>✗ Don't use arbitrary dimensions</li>
+        </ul>
+    </div>
+    
+    <h3>5. Use Lazy Loading for Below-the-fold Images</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Improves initial page load time<br>
+            <strong>SEO Impact:</strong> HIGH - Improves Largest Contentful Paint (LCP)
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Use loading="lazy" for off-screen images</li>
+            <li>✓ Use loading="eager" for above-the-fold images</li>
+            <li>✓ Combine with responsive images</li>
+            <li>✗ Don't lazy-load critical images</li>
+        </ul>
+    </div>
+    
+    <h3>6. Implement Responsive Images</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Serves optimized images for different devices<br>
+            <strong>SEO Impact:</strong> HIGH - Mobile performance is a ranking factor
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Use srcset and sizes for scalable solutions</li>
+            <li>✓ Provide multiple image resolutions</li>
+            <li>✓ Use WebP with fallback format</li>
+            <li>✗ Don't use single image for all devices</li>
+        </ul>
+        <p><strong>Complete Responsive Image Example:</strong></p>
+        <div class="example">
+            &lt;picture&gt;<br>
+            &nbsp;&nbsp;&lt;source <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;media="(max-width: 600px)"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;srcset="image-mobile-small.webp 480w,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image-mobile-large.webp 800w"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="image/webp"&gt;<br>
+            &nbsp;&nbsp;&lt;source <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;media="(max-width: 1200px)"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;srcset="image-tablet.webp 1000w,<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;image-desktop.webp 1500w"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="image/webp"&gt;<br>
+            &nbsp;&nbsp;&lt;source <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;srcset="image-desktop.jpg 1500w"<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;type="image/jpeg"&gt;<br>
+            &nbsp;&nbsp;&lt;img src="image.jpg" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alt="Product showing features" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width="1500" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height="1000" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;loading="lazy"&gt;<br>
+            &lt;/picture&gt;
+        </div>
+    </div>
+    
+    <h3>7. Use WebP Format with Fallback</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> WebP is 25-35% smaller than JPEG while maintaining quality<br>
+            <strong>SEO Impact:</strong> HIGH - Significantly improves page speed
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <div class="example">
+            &lt;picture&gt;<br>
+            &nbsp;&nbsp;&lt;source srcset="image.webp" type="image/webp"&gt;<br>
+            &nbsp;&nbsp;&lt;source srcset="image.jpg" type="image/jpeg"&gt;<br>
+            &nbsp;&nbsp;&lt;img src="image.jpg" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alt="Image description" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;loading="lazy"&gt;<br>
+            &lt;/picture&gt;
+        </div>
+    </div>
+    
+    <h3>8. Add Image Context with Captions</h3>
+    <div class="info-box">
+        <p>
+            <strong>Why:</strong> Helps users and search engines understand image purpose<br>
+            <strong>SEO Impact:</strong> MEDIUM - Provides additional context
+        </p>
+        <div class="example">
+            &lt;figure&gt;<br>
+            &nbsp;&nbsp;&lt;img src="product.jpg" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alt="Premium leather office chair in black" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width="400" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height="500"&gt;<br>
+            &nbsp;&nbsp;&lt;figcaption&gt;<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;Premium ergonomic office chair with lumbar support<br>
+            &nbsp;&nbsp;&lt;/figcaption&gt;<br>
+            &lt;/figure&gt;
+        </div>
+    </div>
+    
+    <h3>9. Optimize Images for Search Results</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Images can appear in Google Image Search and snippets<br>
+            <strong>SEO Impact:</strong> HIGH - Can drive significant traffic
+        </p>
+        <p><strong>Best Practices:</strong></p>
+        <ul>
+            <li>✓ Use original, high-quality images</li>
+            <li>✓ Make images related to page content</li>
+            <li>✓ Use good alt text with keywords</li>
+            <li>✓ Include image in XML sitemap</li>
+            <li>✓ Use structured data (schema markup) for images</li>
+            <li>✗ Avoid blurry or low-quality images</li>
+            <li>✗ Don't use images unrelated to content</li>
+        </ul>
+    </div>
+    
+    <h3>10. Use Structured Data for Images</h3>
+    <div class="success-box">
+        <p>
+            <strong>Why:</strong> Schema markup helps search engines understand images<br>
+            <strong>SEO Impact:</strong> MEDIUM - Improves Rich Snippets display
+        </p>
+        <div class="example">
+            &lt;script type="application/ld+json"&gt;<br>
+            {<br>
+            &nbsp;&nbsp;"@context": "https://schema.org",<br>
+            &nbsp;&nbsp;"@type": "Product",<br>
+            &nbsp;&nbsp;"name": "Executive Office Chair",<br>
+            &nbsp;&nbsp;"image": [<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"https://example.com/chair-front.jpg",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"https://example.com/chair-side.jpg",<br>
+            &nbsp;&nbsp;&nbsp;&nbsp;"https://example.com/chair-back.jpg"<br>
+            &nbsp;&nbsp;]<br>
+            }<br>
+            &lt;/script&gt;
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         COMPLETE IMAGE TAG EXAMPLES
+         ======================================== -->
+    
+    <h2>Complete Image Tag Examples</h2>
+    
+    <h3>✓ CORRECT - SEO Optimized Image Tags</h3>
+    <div class="success-box">
+        <div class="example">
+            &lt;!-- Simple optimized image --&gt;<br>
+            &lt;img src="product-photo.jpg" <br>
+            &nbsp;&nbsp;alt="Red leather office chair with ergonomic design" <br>
+            &nbsp;&nbsp;width="800" <br>
+            &nbsp;&nbsp;height="600" <br>
+            &nbsp;&nbsp;loading="lazy"&gt;<br>
+            <br>
+            &lt;!-- Responsive image with srcset --&gt;<br>
+            &lt;img src="product.jpg" <br>
+            &nbsp;&nbsp;srcset="product-small.jpg 480w, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product-medium.jpg 800w, <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;product-large.jpg 1200w" <br>
+            &nbsp;&nbsp;sizes="(max-width: 600px) 100vw, 50vw" <br>
+            &nbsp;&nbsp;alt="High-quality product photography" <br>
+            &nbsp;&nbsp;width="1200" <br>
+            &nbsp;&nbsp;height="900" <br>
+            &nbsp;&nbsp;loading="lazy"&gt;<br>
+            <br>
+            &lt;!-- WebP with fallback --&gt;<br>
+            &lt;picture&gt;<br>
+            &nbsp;&nbsp;&lt;source srcset="image.webp" type="image/webp"&gt;<br>
+            &nbsp;&nbsp;&lt;img src="image.jpg" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alt="Detailed product description" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width="600" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height="400" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;loading="lazy"&gt;<br>
+            &lt;/picture&gt;<br>
+            <br>
+            &lt;!-- Image with caption --&gt;<br>
+            &lt;figure&gt;<br>
+            &nbsp;&nbsp;&lt;img src="team-photo.jpg" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;alt="Company team of 12 smiling professionals" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;width="1000" <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;height="600"&gt;<br>
+            &nbsp;&nbsp;&lt;figcaption&gt;Our dedicated team&lt;/figcaption&gt;<br>
+            &lt;/figure&gt;
+        </div>
+    </div>
+    
+    <h3>✗ INCORRECT - Common Mistakes</h3>
+    <div class="warning-box">
+        <div class="example">
+            &lt;!-- BAD: Missing alt text --&gt;<br>
+            &lt;img src="photo.jpg"&gt;<br>
+            <br>
+            &lt;!-- BAD: Generic alt text --&gt;<br>
+            &lt;img src="image.jpg" alt="image"&gt;<br>
+            <br>
+            &lt;!-- BAD: No dimensions (layout shift) --&gt;<br>
+            &lt;img src="photo.jpg" alt="photo"&gt;<br>
+            <br>
+            &lt;!-- BAD: Large unoptimized image --&gt;<br>
+            &lt;img src="photo-5MB.jpg" alt="photo" width="300" height="200"&gt;<br>
+            <br>
+            &lt;!-- BAD: Generic filename --&gt;<br>
+            &lt;img src="IMG_20240115.jpg" alt="photo"&gt;<br>
+            <br>
+            &lt;!-- BAD: Empty alt for decorative image (OK) but bad content image --&gt;<br>
+            &lt;img src="product.jpg" alt=""&gt;<br>
+            <br>
+            &lt;!-- BAD: Alt text is too long and keyword-stuffed --&gt;<br>
+            &lt;img src="chair.jpg" alt="buy office chair leather ergonomic desk chair"&gt;
+        </div>
+    </div>
+    
+    
+    <!-- ========================================
+         IMAGE SEO CHECKLIST
+         ======================================== -->
+    
+    <h2>Image Tag SEO Checklist</h2>
+    
+    <div class="success-box">
+        <h3>Before Publishing Your Website:</h3>
+        <ul>
+            <li>☑ All images have descriptive filenames</li>
+            <li>☑ All images have high-quality alt text</li>
+            <li>☑ All images have width and height attributes</li>
+            <li>☑ Images are optimized for file size</li>
+            <li>☑ Using lazy loading for below-the-fold images</li>
+            <li>☑ Responsive images implemented (srcset/sizes)</li>
+            <li>☑ WebP format used with JPEG fallback</li>
+            <li>☑ No decorative images without empty alt=""</li>
+            <li>☑ Images are relevant to page content</li>
+            <li>☑ Alt text includes relevant keywords naturally</li>
+            <li>☑ Image captions added where appropriate</li>
+            <li>☑ Structured data (schema) added for product images</li>
+            <li>☑ No broken image links (404 errors)</li>
+            <li>☑ Images appear in XML sitemap</li>
+            <li>☑ Page speed optimized (Google PageSpeed)</li>
+            <li>☑ Core Web Vitals score is good</li>
+            <li>☑ Images tested on mobile devices</li>
+            <li>☑ Title attributes added for better UX</li>
+        </ul>
+    </div>
+    
+    
+    <!-- ========================================
+         CORE WEB VITALS & IMAGES
+         ======================================== -->
+    
+    <h2>How Images Affect Core Web Vitals</h2>
+    
+    <table>
+        <tr>
+            <th>Core Web Vital</th>
+            <th>How Images Affect It</th>
+            <th>How to Improve</th>
+        </tr>
+        <tr>
+            <td><strong>Largest Contentful Paint (LCP)</strong></td>
+            <td>Large images slow down LCP</td>
+            <td>Optimize image size, use lazy loading, use WebP format</td>
+        </tr>
+        <tr>
+            <td><strong>Cumulative Layout Shift (CLS)</strong></td>
+            <td>Missing dimensions cause shifts</td>
+            <td>Always include width and height attributes</td>
+        </tr>
+        <tr>
+            <td><strong>First Input Delay (FID)</strong></td>
+            <td>Large images consume resources</td>
+            <td>Optimize images, use async loading</td>
+        </tr>
+    </table>
+    
+    </div> <!-- End container -->
+
+</body>
+</html>

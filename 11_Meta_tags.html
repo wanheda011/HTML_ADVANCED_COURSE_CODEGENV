@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Meta Tags — Complete Guide & SEO Best Practices</title>
+
+  <!--
+    Overview:
+    Meta tags provide metadata about the HTML document. They appear in the <head>
+    and are used by browsers, search engines, social platforms and devices.
+    This file documents common meta tags, attributes, examples and SEO best practices.
+  -->
+
+  <!-- Basic / Required Meta Tags -->
+  <!-- Charset: declare document encoding early to avoid rendering issues -->
+  <meta charset="utf-8" />
+  <!-- Viewport: essential for responsive design on mobile -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Document metadata -->
+  <!-- Title tag is separate; meta description provides a summary shown in SERPs -->
+  <!-- Description: write a concise, unique summary for each page (120-160 chars recommended) -->
+  <meta name="description" content="Concise page summary: what this page is about. Use unique description per page; include primary keywords naturally." />
+
+  <!-- Author: optional -->
+  <meta name="author" content="Your Organization or Name" />
+
+  <!-- Robots: control indexing/crawling at page level -->
+  <!-- Example: index, follow (default) — other values: noindex, nofollow, none, noarchive -->
+  <meta name="robots" content="index, follow" />
+
+  <!-- Referrer policy: control Referer header sent on navigation -->
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Theme color for mobile browsers (address bar on Android) -->
+  <meta name="theme-color" content="#0a84ff" />
+
+  <!-- X-UA-Compatible: legacy IE compatibility (mostly obsolete but sometimes used) -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- Content-Language: indicates language of the page (useful but hreflang is preferred for SEO) -->
+  <meta http-equiv="Content-Language" content="en" />
+
+  <!-- Avoid using meta keywords — ignored by major search engines and can encourage keyword stuffing -->
+  <!-- <meta name="keywords" content="old, deprecated, list"> -->
+
+  <!-- Social / Rich preview meta tags -->
+  <!-- Open Graph (Facebook, LinkedIn, many crawlers use these) -->
+  <meta property="og:title" content="Page Title — Keep it descriptive" />
+  <meta property="og:description" content="A similarly concise description optimized for social sharing." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://example.com/page" />
+  <meta property="og:image" content="https://example.com/og-image.jpg" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Page Title" />
+  <meta name="twitter:description" content="Short description for Twitter card." />
+  <meta name="twitter:image" content="https://example.com/twitter-image.jpg" />
+
+  <!-- Canonical link (not a meta tag, but critical for SEO) -->
+  <link rel="canonical" href="https://example.com/page" />
+
+  <!-- Hreflang for multilingual pages (use link rel="alternate" hreflang="x") -->
+  <!-- Example:
+       <link rel="alternate" hreflang="en" href="https://example.com/en/page" />
+       <link rel="alternate" hreflang="es" href="https://example.com/es/page" />
+  -->
+
+  <!-- Structured data (JSON-LD) belongs in the head or near end of body -->
+  <!-- Example: Page or Article schema improves SERP and rich result eligibility -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://example.com/page",
+    "name": "Page Title",
+    "description": "Concise description matching meta description."
+  }
+  </script>
+
+  <!--
+    Explanations & Best Practices (summary):
+    - Put charset and viewport near the top of the head.
+    - Title and meta description are primary drivers of SERP display and CTR.
+      * Title: unique, relevant, ~50-60 characters (avoid truncation).
+      * Description: unique, informative, ~120-160 characters.
+    - Use a single canonical link to indicate the preferred URL.
+    - Use robots meta only when you want to prevent indexing or following.
+    - Avoid meta keywords; they are obsolete.
+    - Use Open Graph and Twitter cards to control social link previews.
+    - Use hreflang links for internationalized content; ensure server returns correct language pages.
+    - Ensure meta tags are dynamic and unique per page (not identical across site).
+    - Avoid duplicate meta descriptions; they dilute SEO signals.
+    - Keep meta content readable — write for users, not search engines.
+    - Use structured data (JSON-LD) to expose entities: Article, Product, VideoObject, BreadcrumbList, etc.
+    - Test with tools: Google Rich Results Test, Mobile-Friendly Test, Lighthouse, Live Search Console preview.
+    - Prevent indexing of staging or private content with robots.txt + meta robots noindex (use both for safety).
+  -->
+
+  <!-- Examples of special meta use cases -->
+  <!-- Prevent caching in basic cases (use headers on server where possible) -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <!-- Meta refresh: use sparingly (generally avoid because it can hurt UX and SEO) -->
+  <!-- <meta http-equiv="refresh" content="5; url=https://example.com/new-location" /> -->
+
+  <!-- Accessibility / UA: use lang attribute on html element and content-language if needed -->
+  <!-- <html lang="en"> is already set above -->
+
+  <!-- Quick SEO checklist as comments:
+       - Unique title and meta description per page.
+       - Provide canonical and hreflang where necessary.
+       - Add Open Graph and Twitter Card metadata for share previews.
+       - Use JSON-LD structured data for rich results where applicable.
+       - Ensure meta robots is correct (index or noindex).
+       - Avoid blocking important assets (CSS/JS) with robots.txt that affect rendering.
+       - Place key meta tags near top of <head>.
+  -->
+
+</head>
+<body>
+  <main>
+    <h1>Meta Tags — Guide</h1>
+
+    <!-- Visible guidance on the page (not required for SEO, but useful for documentation) -->
+    <section>
+      <h2>What are meta tags?</h2>
+      <p>Meta tags are head-level elements that provide metadata about the HTML document. They do not display on the page but are used by browsers, crawlers and social platforms.</p>
+    </section>
+
+    <section>
+      <h2>Important meta tags & attributes</h2>
+      <ul>
+        <li><strong>charset</strong> — sets document character encoding.</li>
+        <li><strong>viewport</strong> — controls layout on mobile devices.</li>
+        <li><strong>description</strong> — summary shown in search results.</li>
+        <li><strong>robots</strong> — control indexing and link following.</li>
+        <li><strong>og:*</strong> and <strong>twitter:*</strong> — social preview metadata.</li>
+        <li><strong>referrer</strong> — controls Referer header behavior.</li>
+        <li><strong>theme-color</strong> — mobile UI color hint.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>SEO best practices (concise)</h2>
+      <ol>
+        <li>Write unique, descriptive titles and meta descriptions for every page.</li>
+        <li>Keep meta description length within ~120–160 characters and avoid keyword stuffing.</li>
+        <li>Use canonical links to resolve duplicate-content issues.</li>
+        <li>Provide structured data (JSON-LD) for content types that benefit from rich results.</li>
+        <li>Use Open Graph and Twitter Card tags to control shared link previews.</li>
+        <li>Use hreflang for regional/language variants.</li>
+        <li>Place important meta tags early in the head for predictable rendering.</li>
+        <li>Test and monitor via Search Console and rich result testing tools.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Common mistakes to avoid</h2>
+      <ul>
+        <li>Duplicate or missing meta descriptions across many pages.</li>
+        <li>Relying on meta keywords.</li>
+        <li>Hiding critical content behind JavaScript without server-rendered HTML for crawlers.</li>
+        <li>Blocking resources needed for rendering (CSS/JS) via robots.txt.</li>
+        <li>Using meta refresh redirects for permanent moves instead of server-side 301.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Tools & validation</h2>
+      <p>Use Google Search Console, Lighthouse, Mobile-Friendly Test, Rich Results Test and social card validators (Facebook Sharing Debugger, Twitter Card Validator) to validate metadata and previews.</p>
+    </section>
+
+
+
+
+
+</html></body>  </main>  </main>
+</body>
+</html>
