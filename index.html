@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Course Website</title>
+    
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            background-color: #34495e;
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        
+        nav a:hover {
+            background-color: #2980b9;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-left: 4px solid #e74c3c;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #7f8c8d;
+            margin-top: 20px;
+        }
+        
+        .info-box {
+            background-color: #ecf0f1;
+            border-left: 4px solid #3498db;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #856404;
+        }
+        
+        .success-box {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+            color: #155724;
+        }
+        
+        code {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 2px 6px;
+            font-family: 'Courier New', monospace;
+            color: #d63384;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #34495e;
+            color: white;
+            font-weight: bold;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        ul, ol {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .example {
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            line-height: 1.4;
+        }
+        
+        .good-link {
+            color: #28a745;
+            text-decoration: none;
+            border-bottom: 2px solid #28a745;
+        }
+        
+        .bad-link {
+            color: #dc3545;
+            text-decoration: underline;
+            text-decoration-style: wavy;
+        }
+        
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+        
+        section {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        section:last-child {
+            border-bottom: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>HTML Course Website</h1>
+        
+        <nav>
+            <ul>
+                <li><a href="#intro">HTML Introduction</a></li>
+                <li><a href="#typography">Typography</a></li>
+                <li><a href="#anchors">Anchor Tags</a></li>
+                <li><a href="#images">Images</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li><a href="#semantic">Semantic HTML</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#iframe">Iframe</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#meta">Meta Tags</a></li>
+                <li><a href="#style">Style Tag</a></li>
+            </ul>
+        </nav>
+        
+        <section id="intro">
+            <h2>HTML Introduction</h2>
+            
+            <h3>What is HTML?</h3>
+            <p>HTML stands for HyperText Markup Language</p>
+            <ul>
+                <li><strong>HyperText:</strong> Text with links (non-sequential reading)</li>
+                <li><strong>Markup:</strong> Uses tags to mark/define content</li>
+                <li><strong>Language:</strong> System of communication and syntax</li>
+            </ul>
+            <p>HTML is the standard markup language used to create web pages. It provides structure and semantic meaning to web content. HTML works with CSS (styling) and JavaScript (interactivity).</p>
+            
+            <h3>Need of HTML?</h3>
+            <p>HTML is essential for several reasons:</p>
+            <ol>
+                <li><strong>STRUCTURE:</strong> Provides semantic structure to content
+                    <ul>
+                        <li>Organizes content in a meaningful way</li>
+                        <li>Defines different sections (header, nav, main, footer)</li>
+                    </ul>
+                </li>
+                <li><strong>BROWSER COMPATIBILITY:</strong> Standardized format recognized by all browsers
+                    <ul>
+                        <li>Any browser can interpret and display HTML</li>
+                    </ul>
+                </li>
+                <li><strong>SEO OPTIMIZATION:</strong> Search engines rely on HTML structure
+                    <ul>
+                        <li>Proper tags help search engines understand content</li>
+                    </ul>
+                </li>
+                <li><strong>ACCESSIBILITY:</strong> Helps assistive technologies (screen readers)
+                    <ul>
+                        <li>Makes content accessible to people with disabilities</li>
+                    </ul>
+                </li>
+                <li><strong>FOUNDATION:</strong> Base layer of web development
+                    <ul>
+                        <li>CSS and JavaScript build upon HTML structure</li>
+                    </ul>
+                </li>
+            </ol>
+            
+            <h3>Responsibility of HTML?</h3>
+            <p>HTML has specific responsibilities:</p>
+            <ol>
+                <li><strong>CONTENT MARKUP:</strong> Mark up textual and media content
+                    <ul>
+                        <li>Paragraphs, headings, lists, images, videos</li>
+                    </ul>
+                </li>
+                <li><strong>SEMANTIC MEANING:</strong> Give meaning to content
+                    <ul>
+                        <li>Use &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt; instead of just divs</li>
+                    </ul>
+                </li>
+                <li><strong>FORM CREATION:</strong> Provide forms for user input
+                    <ul>
+                        <li>Text inputs, checkboxes, radio buttons, submit buttons</li>
+                    </ul>
+                </li>
+                <li><strong>LINKING:</strong> Connect documents and resources
+                    <ul>
+                        <li>Navigation between pages</li>
+                        <li>Linking external stylesheets and scripts</li>
+                    </ul>
+                </li>
+                <li><strong>METADATA PROVISION:</strong> Include page metadata
+                    <ul>
+                        <li>Title, character encoding, viewport settings</li>
+                    </ul>
+                </li>
+            </ol>
+            <p><strong>Note:</strong> HTML is NOT responsible for:</p>
+            <ul>
+                <li>Styling (that's CSS's job)</li>
+                <li>Interactive behavior (that's JavaScript's job)</li>
+            </ul>
+            
+            <h3>HTML in React and Other Frameworks</h3>
+            <p>HTML remains fundamental in modern frameworks:</p>
+            <ol>
+                <li><strong>REACT:</strong>
+                    <ul>
+                        <li>JSX syntax combines HTML-like syntax with JavaScript</li>
+                        <li>React renders HTML to the DOM dynamically</li>
+                        <li>Example: &lt;div className="App"&gt;Content&lt;/div&gt;</li>
+                    </ul>
+                </li>
+                <li><strong>ANGULAR:</strong>
+                    <ul>
+                        <li>Uses HTML templates with Angular directives</li>
+                        <li>Two-way data binding with HTML elements</li>
+                    </ul>
+                </li>
+                <li><strong>VUE:</strong>
+                    <ul>
+                        <li>Vue templates extend HTML with Vue-specific syntax</li>
+                        <li>Components are built around HTML structure</li>
+                    </ul>
+                </li>
+                <li><strong>SVELTE:</strong>
+                    <ul>
+                        <li>Uses HTML as the template language</li>
+                        <li>Compiles components to vanilla JavaScript</li>
+                    </ul>
+                </li>
+                <li><strong>NEXT.js / NUXT:</strong>
+                    <ul>
+                        <li>Framework-specific components render to HTML</li>
+                        <li>Server-side rendering produces HTML</li>
+                    </ul>
+                </li>
+            </ol>
+            <p><strong>Key Point:</strong> All modern frameworks ultimately generate HTML that browsers can render and display.</p>
+            
+            <h3>Elements, Tags, and Attributes</h3>
+            <h4>Tags:</h4>
+            <p>The markup syntax used to define elements</p>
+            <p><strong>Syntax:</strong> &lt;tagname&gt;content&lt;/tagname&gt;</p>
+            <ul>
+                <li>Opening tag: &lt;tagname&gt;</li>
+                <li>Closing tag: &lt;/tagname&gt;</li>
+                <li>Self-closing tags: &lt;tagname /&gt; (e.g., &lt;img /&gt;, &lt;br /&gt;)</li>
+            </ul>
+            <p><strong>Examples of common tags:</strong></p>
+            <p>&lt;h1&gt;, &lt;p&gt;, &lt;div&gt;, &lt;span&gt;, &lt;a&gt;, &lt;img&gt;, &lt;ul&gt;, &lt;li&gt;</p>
+            
+            <h4>Elements:</h4>
+            <p>Complete unit consisting of opening tag, content, and closing tag</p>
+            <p><strong>Example:</strong> &lt;p&gt;This is a paragraph&lt;/p&gt;</p>
+            <ul>
+                <li>Opening tag: &lt;p&gt;</li>
+                <li>Content: This is a paragraph</li>
+                <li>Closing tag: &lt;/p&gt;</li>
+                <li>Entire structure: The ELEMENT</li>
+            </ul>
+            
+            <h4>Attributes:</h4>
+            <p>Extra information about elements</p>
+            <p><strong>Syntax:</strong> &lt;tagname attribute="value"&gt;content&lt;/tagname&gt;</p>
+            <ul>
+                <li>Attributes modify element behavior or provide metadata</li>
+                <li>Always in the opening tag</li>
+                <li>Format: name="value" (value in quotes)</li>
+            </ul>
+            <p><strong>Common attributes:</strong></p>
+            <ul>
+                <li><strong>id:</strong> Unique identifier for an element</li>
+                <li><strong>class:</strong> CSS class for styling</li>
+                <li><strong>href:</strong> URL for links</li>
+                <li><strong>src:</strong> Source path for images/scripts</li>
+                <li><strong>alt:</strong> Alternative text for images</li>
+                <li><strong>width, height:</strong> Dimensions</li>
+                <li><strong>disabled:</strong> Disables form elements</li>
+                <li><strong>placeholder:</strong> Hint text in input fields</li>
+            </ul>
+            
+            <h3>Practical Examples</h3>
+            <h1>Welcome to HTML Basics</h1>
+            <p class="intro" id="paragraph-1">This is a paragraph with a class and id attribute.</p>
+        </section>
+        
+        <section id="typography">
+            <h2>Typography (P Tag & Text Formatting)</h2>
+            
+            <h3>The &lt;p&gt; Tag in HTML</h3>
+            <div class="info-box">
+                <h4>What is &lt;p&gt; Tag?</h4>
+                <ul>
+                    <li>&lt;p&gt; stands for "Paragraph"</li>
+                    <li>It is a block-level element used to define paragraphs of text</li>
+                    <li>Each &lt;p&gt; tag creates a new paragraph with automatic spacing before and after</li>
+                    <li>Browsers add default margins (typically 16px top and bottom)</li>
+                </ul>
+                <p><strong>Basic Syntax:</strong></p>
+                <div class="example">
+                    &lt;p&gt;This is a paragraph of text.&lt;/p&gt;<br>
+                    &lt;p&gt;This is another paragraph.&lt;/p&gt;
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>Key Characteristics of &lt;p&gt; Tag:</h4>
+                <ol>
+                    <li><strong>BLOCK-LEVEL ELEMENT:</strong>
+                        <ul>
+                            <li>Takes full width of parent container</li>
+                            <li>Creates line break before and after content</li>
+                            <li>Stacks vertically with other block elements</li>
+                        </ul>
+                    </li>
+                    <li><strong>SEMANTIC MEANING:</strong>
+                        <ul>
+                            <li>Tells browsers and screen readers this is a paragraph</li>
+                            <li>Important for accessibility and SEO</li>
+                        </ul>
+                    </li>
+                    <li><strong>DEFAULT STYLING:</strong>
+                        <ul>
+                            <li>Browsers apply default margin: 16px 0</li>
+                            <li>Can be overridden with CSS</li>
+                        </ul>
+                    </li>
+                    <li><strong>CONTAINS INLINE ELEMENTS:</strong>
+                        <ul>
+                            <li>Can have &lt;strong&gt;, &lt;em&gt;, &lt;a&gt;, &lt;span&gt; inside it</li>
+                            <li>Should NOT contain block-level elements like &lt;div&gt;, &lt;h1&gt;</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            
+            <h3>Headings in HTML</h3>
+            <p>HTML provides six levels of headings, from &lt;h1&gt; (most important) to &lt;h6&gt; (least important).</p>
+            <div class="example">
+                &lt;h1&gt;Main Heading&lt;/h1&gt;<br>
+                &lt;h2&gt;Subheading&lt;/h2&gt;<br>
+                &lt;h3&gt;Sub-subheading&lt;/h3&gt;<br>
+                &lt;h4&gt;Level 4 heading&lt;/h4&gt;<br>
+                &lt;h5&gt;Level 5 heading&lt;/h5&gt;<br>
+                &lt;h6&gt;Level 6 heading&lt;/h6&gt;
+            </div>
+            
+            <h3>Text Formatting Tags</h3>
+            <p>Text formatting tags are used to format text with special meaning. They add semantic value and visual styling to content.</p>
+            
+            <h4>Emphasis Tags</h4>
+            <table>
+                <tr>
+                    <th>Tag</th>
+                    <th>Purpose</th>
+                    <th>Semantic</th>
+                    <th>Visual</th>
+                </tr>
+                <tr>
+                    <td>&lt;strong&gt;</td>
+                    <td>Strong importance</td>
+                    <td>YES</td>
+                    <td>Bold</td>
+                </tr>
+                <tr>
+                    <td>&lt;em&gt;</td>
+                    <td>Emphasis</td>
+                    <td>YES</td>
+                    <td>Italic</td>
+                </tr>
+                <tr>
+                    <td>&lt;b&gt;</td>
+                    <td>Bold text</td>
+                    <td>NO</td>
+                    <td>Bold</td>
+                </tr>
+                <tr>
+                    <td>&lt;i&gt;</td>
+                    <td>Italic text</td>
+                    <td>NO</td>
+                    <td>Italic</td>
+                </tr>
+            </table>
+            
+            <h4>Highlighting Tags</h4>
+            <ul>
+                <li>&lt;mark&gt;: Highlights text (yellow background)</li>
+                <li>&lt;del&gt;: Deleted/strikethrough text</li>
+                <li>&lt;ins&gt;: Inserted/underlined text</li>
+            </ul>
+            
+            <h4>Subscript & Superscript</h4>
+            <ul>
+                <li>&lt;sub&gt;: Subscript text (H<sub>2</sub>O)</li>
+                <li>&lt;sup&gt;: Superscript text (E=mc<sup>2</sup>)</li>
+            </ul>
+            
+            <h4>Code & Technical Tags</h4>
+            <ul>
+                <li>&lt;code&gt;: Inline code snippets</li>
+                <li>&lt;kbd&gt;: Keyboard input</li>
+                <li>&lt;var&gt;: Variables</li>
+                <li>&lt;samp&gt;: Sample output</li>
+            </ul>
+            
+            <h4>Miscellaneous Tags</h4>
+            <ul>
+                <li>&lt;small&gt;: Small text</li>
+                <li>&lt;abbr&gt;: Abbreviations</li>
+                <li>&lt;blockquote&gt;: Long quotations</li>
+                <li>&lt;q&gt;: Short inline quotations</li>
+                <li>&lt;cite&gt;: Citations</li>
+            </ul>
+            
+            <h3>Best Practices for SEO</h3>
+            <div class="success-box">
+                <ul>
+                    <li>Use semantic tags (&lt;strong&gt;, &lt;em&gt;) over presentational tags (&lt;b&gt;, &lt;i&gt;)</li>
+                    <li>Use proper heading hierarchy (&lt;h1&gt; to &lt;h6&gt;)</li>
+                    <li>Emphasize primary keywords naturally</li>
+                    <li>Use &lt;mark&gt; for highlighted information</li>
+                    <li>Provide full forms for abbreviations with &lt;abbr&gt;</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="anchors">
+            <h2>Anchor Tags</h2>
+            
+            <h3>What is the Anchor Tag?</h3>
+            <div class="info-box">
+                <h4>Anchor Tag Definition:</h4>
+                <p>The <code>&lt;a&gt;</code> tag stands for "Anchor" and is used to create hyperlinks in HTML. It allows users to navigate to other web pages, files, email addresses, or specific locations within the same page.</p>
+                <p><strong>Basic Syntax:</strong><br><code>&lt;a href="URL"&gt;Link Text&lt;/a&gt;</code></p>
+                <p><strong>Key Characteristics:</strong><br>
+                • Inline element (doesn't create line breaks)<br>
+                • Creates clickable hyperlinks<br>
+                • Essential for navigation and SEO<br>
+                • Can link to various types of destinations<br>
+                • Has multiple attributes to modify behavior</p>
+            </div>
+            
+            <h3>Types of Anchor Tags (Links)</h3>
+            <ul>
+                <li><strong>Absolute Links:</strong> Links to external websites with full URL</li>
+                <li><strong>Relative Links:</strong> Links to pages within your own website</li>
+                <li><strong>Fragment Links:</strong> Links to specific sections within the same page</li>
+                <li><strong>Email Links:</strong> Links that open the user's email client</li>
+                <li><strong>Phone Links:</strong> Links that trigger phone calls on mobile devices</li>
+                <li><strong>Download Links:</strong> Links to downloadable files</li>
+            </ul>
+            
+            <h3>Anchor Tag Attributes</h3>
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Purpose</th>
+                    <th>SEO Impact</th>
+                </tr>
+                <tr>
+                    <td><strong>href</strong></td>
+                    <td>The URL the link points to (REQUIRED)</td>
+                    <td>Critical</td>
+                </tr>
+                <tr>
+                    <td><strong>title</strong></td>
+                    <td>Tooltip text on hover, link description</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td><strong>target</strong></td>
+                    <td>Where to open the link</td>
+                    <td>Medium</td>
+                </tr>
+                <tr>
+                    <td><strong>rel</strong></td>
+                    <td>Relationship between current page and linked page</td>
+                    <td>Very High</td>
+                </tr>
+            </table>
+            
+            <h3>Best Practices for SEO</h3>
+            <div class="success-box">
+                <ul>
+                    <li>Write descriptive anchor text</li>
+                    <li>Use internal links strategically</li>
+                    <li>Handle external links properly with rel attributes</li>
+                    <li>Optimize link title attributes</li>
+                    <li>Ensure links are accessible</li>
+                    <li>Avoid broken links</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="images">
+            <h2>Images</h2>
+            
+            <h3>What is the Image Tag?</h3>
+            <div class="info-box">
+                <p>The <code>&lt;img&gt;</code> tag is an HTML element used to embed images in web pages. It is a self-closing tag that does not have a closing tag.</p>
+                <p><strong>Basic Syntax:</strong><br><code>&lt;img src="image.jpg" alt="Description of image"&gt;</code></p>
+            </div>
+            
+            <h3>Essential Attributes</h3>
+            <table>
+                <tr>
+                    <th>Attribute</th>
+                    <th>Purpose</th>
+                    <th>Required?</th>
+                    <th>SEO Impact</th>
+                </tr>
+                <tr>
+                    <td><strong>src</strong></td>
+                    <td>Path to the image file</td>
+                    <td>YES</td>
+                    <td>Critical</td>
+                </tr>
+                <tr>
+                    <td><strong>alt</strong></td>
+                    <td>Alternative text describing image</td>
+                    <td>YES*</td>
+                    <td>Very High</td>
+                </tr>
+                <tr>
+                    <td><strong>width</strong></td>
+                    <td>Image width in pixels</td>
+                    <td>NO</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td><strong>height</strong></td>
+                    <td>Image height in pixels</td>
+                    <td>NO</td>
+                    <td>High</td>
+                </tr>
+                <tr>
+                    <td><strong>loading</strong></td>
+                    <td>Lazy loading strategy</td>
+                    <td>NO</td>
+                    <td>High</td>
+                </tr>
+            </table>
+            
+            <h3>Best Practices for SEO</h3>
+            <div class="success-box">
+                <ul>
+                    <li>Always include descriptive alt text</li>
+                    <li>Use descriptive filenames with keywords</li>
+                    <li>Specify width and height to prevent layout shift</li>
+                    <li>Use lazy loading for below-the-fold images</li>
+                    <li>Optimize image file sizes</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="lists">
+            <h2>Lists</h2>
+            <p>HTML provides three types of lists: ordered lists (&lt;ol&gt;), unordered lists (&lt;ul&gt;), and description lists (&lt;dl&gt;).</p>
+            <h3>Ordered Lists</h3>
+            <div class="example">
+                &lt;ol&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;First item&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Second item&lt;/li&gt;<br>
+                &lt;/ol&gt;
+            </div>
+            <h3>Unordered Lists</h3>
+            <div class="example">
+                &lt;ul&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Item one&lt;/li&gt;<br>
+                &nbsp;&nbsp;&lt;li&gt;Item two&lt;/li&gt;<br>
+                &lt;/ul&gt;
+            </div>
+        </section>
+        
+        <section id="tables">
+            <h2>Tables</h2>
+            <p>HTML tables are used to display tabular data with rows and columns.</p>
+            <h3>Basic Table Structure</h3>
+            <div class="example">
+                &lt;table&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 1&lt;/th&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;Header 2&lt;/th&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &nbsp;&nbsp;&lt;tr&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 1&lt;/td&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Data 2&lt;/td&gt;<br>
+                &nbsp;&nbsp;&lt;/tr&gt;<br>
+                &lt;/table&gt;
+            </div>
+        </section>
+        
+        <section id="semantic">
+            <h2>Semantic HTML</h2>
+            <p>Semantic HTML uses meaningful tags that describe the content's purpose.</p>
+            <h3>Common Semantic Tags</h3>
+            <ul>
+                <li>&lt;header&gt; - Page or section header</li>
+                <li>&lt;nav&gt; - Navigation links</li>
+                <li>&lt;main&gt; - Main content</li>
+                <li>&lt;article&gt; - Self-contained content</li>
+                <li>&lt;section&gt; - Thematic grouping</li>
+                <li>&lt;aside&gt; - Sidebar content</li>
+                <li>&lt;footer&gt; - Page or section footer</li>
+            </ul>
+        </section>
+        
+        <section id="media">
+            <h2>Media</h2>
+            <p>HTML5 provides native support for audio and video elements.</p>
+            <h3>Video Element</h3>
+            <div class="example">
+                &lt;video controls&gt;<br>
+                &nbsp;&nbsp;&lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+                &nbsp;&nbsp;&lt;source src="movie.webm" type="video/webm"&gt;<br>
+                &nbsp;&nbsp;Your browser does not support the video tag.<br>
+                &lt;/video&gt;
+            </div>
+            <h3>Audio Element</h3>
+            <div class="example">
+                &lt;audio controls&gt;<br>
+                &nbsp;&nbsp;&lt;source src="audio.mp3" type="audio/mpeg"&gt;<br>
+                &nbsp;&nbsp;Your browser does not support the audio element.<br>
+                &lt;/audio&gt;
+            </div>
+        </section>
+        
+        <section id="iframe">
+            <h2>Iframe</h2>
+            <p>The &lt;iframe&gt; tag embeds another HTML page within the current page.</p>
+            <h3>Basic Usage</h3>
+            <div class="example">
+                &lt;iframe src="https://www.example.com" width="600" height="400"&gt;&lt;/iframe&gt;
+            </div>
+            <h3>Security Considerations</h3>
+            <ul>
+                <li>Use sandbox attribute for security</li>
+                <li>Validate iframe sources</li>
+                <li>Consider same-origin policy</li>
+            </ul>
+        </section>
+        
+        <section id="forms">
+            <h2>Forms</h2>
+            <p>HTML forms collect user input and send it to a server.</p>
+            <h3>Basic Form Structure</h3>
+            <div class="example">
+                &lt;form action="/submit" method="post"&gt;<br>
+                &nbsp;&nbsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+                &nbsp;&nbsp;&lt;input type="text" id="name" name="name"&gt;<br>
+                &nbsp;&nbsp;&lt;input type="submit" value="Submit"&gt;<br>
+                &lt;/form&gt;
+            </div>
+            <h3>Common Input Types</h3>
+            <ul>
+                <li>text - Single line text</li>
+                <li>email - Email addresses</li>
+                <li>password - Password fields</li>
+                <li>checkbox - Multiple choice</li>
+                <li>radio - Single choice</li>
+                <li>submit - Form submission</li>
+            </ul>
+        </section>
+        
+        <section id="meta">
+            <h2>Meta Tags</h2>
+            <p>Meta tags provide metadata about the HTML document.</p>
+            <h3>Common Meta Tags</h3>
+            <ul>
+                <li>&lt;meta charset="UTF-8"&gt; - Character encoding</li>
+                <li>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt; - Responsive design</li>
+                <li>&lt;meta name="description" content="Page description"&gt; - SEO description</li>
+                <li>&lt;meta name="keywords" content="keyword1, keyword2"&gt; - Keywords</li>
+                <li>&lt;meta name="author" content="Author Name"&gt; - Author information</li>
+            </ul>
+        </section>
+        
+        <section id="style">
+            <h2>Style Tag & CSS</h2>
+            <p>The &lt;style&gt; tag contains CSS rules that style the HTML document.</p>
+            <h3>Internal Stylesheet</h3>
+            <div class="example">
+                &lt;head&gt;<br>
+                &nbsp;&nbsp;&lt;style&gt;<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;body { background-color: lightblue; }<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;h1 { color: navy; }<br>
+                &nbsp;&nbsp;&lt;/style&gt;<br>
+                &lt;/head&gt;
+            </div>
+            <h3>External Stylesheet</h3>
+            <div class="example">
+                &lt;head&gt;<br>
+                &nbsp;&nbsp;&lt;link rel="stylesheet" href="styles.css"&gt;<br>
+                &lt;/head&gt;
+            </div>
+        </section>
+    </div>
+</body>
+</html>
